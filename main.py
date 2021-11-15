@@ -8,19 +8,26 @@ def move_forward():
 
 
 def move_backwards():
-    return 'a'
+    timmy_the_turtle.backward(10)
 
 
 def move_counter_clockwise():
-    return 'a'
+    timmy_the_turtle.left(10)
 
 
 def move_clockwise():
-    return 'a'
+    timmy_the_turtle.right(10)
 
+def clear_screen():
+    screen.resetscreen()
 
 screen.listen()
-screen.onkey(key='a', fun=move_forward())
+screen.onkey(key='d', fun=move_forward)
+screen.onkey(key='w', fun=move_clockwise)
+screen.onkey(key='s', fun=move_counter_clockwise)
+screen.onkey(key='a', fun=move_backwards)
+screen.onkey(key='c', fun=clear_screen)
+
 screen.exitonclick()
 
 
